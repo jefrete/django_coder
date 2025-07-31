@@ -1,0 +1,233 @@
+<!-- Homepage que extiende del base template -->
+<!-- En Django sería: {% extends 'base.html' %} {% block content %} -->
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-primary to-blue-800 text-white">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Encontrá tu hogar ideal
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Miles de propiedades esperándote. Casas, departamentos, terrenos y más.
+            </p>
+            <a href="/propiedades/" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition duration-300 transform hover:scale-105">
+                Ver Propiedades
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar -->
+<section class="bg-white shadow-lg -mt-16 relative z-10 max-w-6xl mx-auto rounded-lg p-6 mb-16">
+    <form class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Tipo</label>
+            <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option>Todos</option>
+                <option>Casa</option>
+                <option>Departamento</option>
+                <option>Terreno</option>
+                <option>Local</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Ubicación</label>
+            <input type="text" placeholder="Ciudad, barrio..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Precio máximo</label>
+            <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option>Sin límite</option>
+                <option>$50.000</option>
+                <option>$100.000</option>
+                <option>$200.000</option>
+                <option>$500.000</option>
+            </select>
+        </div>
+        <div class="flex items-end">
+            <button type="submit" class="w-full bg-primary text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                <i class="fas fa-search mr-2"></i>
+                Buscar
+            </button>
+        </div>
+    </form>
+</section>
+
+<!-- Featured Properties -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Propiedades Destacadas</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Las mejores oportunidades del mercado inmobiliario</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Property Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Casa" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Destacada
+                </div>
+                <div class="absolute top-4 right-4 bg-white bg-opacity-90 p-2 rounded-full">
+                    <i class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Casa en Barrio Norte</h3>
+                <p class="text-gray-600 mb-3 flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                    Buenos Aires, Capital Federal
+                </p>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex space-x-4 text-sm text-gray-600">
+                        <span class="flex items-center">
+                            <i class="fas fa-bed mr-1"></i>
+                            3 hab
+                        </span>
+                        <span class="flex items-center">
+                            <i class="fas fa-bath mr-1"></i>
+                            2 baños
+                        </span>
+                        <span class="flex items-center">
+                            <i class="fas fa-car mr-1"></i>
+                            1 garage
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold text-primary">$120.000</span>
+                    <a href="/propiedades/1/" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Departamento" class="w-full h-48 object-cover">
+                <div class="absolute top-4 right-4 bg-white bg-opacity-90 p-2 rounded-full">
+                    <i class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Departamento Moderno</h3>
+                <p class="text-gray-600 mb-3 flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                    Palermo, Capital Federal
+                </p>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex space-x-4 text-sm text-gray-600">
+                        <span class="flex items-center">
+                            <i class="fas fa-bed mr-1"></i>
+                            2 hab
+                        </span>
+                        <span class="flex items-center">
+                            <i class="fas fa-bath mr-1"></i>
+                            1 baño
+                        </span>
+                        <span class="flex items-center">
+                            <i class="fas fa-car mr-1"></i>
+                            Sin garage
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold text-primary">$85.000</span>
+                    <a href="/propiedades/2/" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Terreno" class="w-full h-48 object-cover">
+                <div class="absolute top-4 right-4 bg-white bg-opacity-90 p-2 rounded-full">
+                    <i class="fas fa-heart text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Terreno en Zona Norte</h3>
+                <p class="text-gray-600 mb-3 flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                    San Isidro, Buenos Aires
+                </p>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex space-x-4 text-sm text-gray-600">
+                        <span class="flex items-center">
+                            <i class="fas fa-expand-arrows-alt mr-1"></i>
+                            500 m²
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold text-primary">$95.000</span>
+                    <a href="/propiedades/3/" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-12">
+        <a href="/propiedades/" class="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition duration-300">
+            Ver todas las propiedades
+        </a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Por qué elegirnos?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Años de experiencia nos respaldan</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-search text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Búsqueda Personalizada</h3>
+                <p class="text-gray-600">Te ayudamos a encontrar exactamente lo que buscás</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-secondary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-handshake text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Asesoramiento Completo</h3>
+                <p class="text-gray-600">Te acompañamos en todo el proceso de compra o venta</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Confianza y Seguridad</h3>
+                <p class="text-gray-600">Todas nuestras operaciones están garantizadas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-16">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-4">¿Tenés una propiedad para vender?</h2>
+        <p class="text-xl mb-8">Contactanos y te ayudamos a venderla al mejor precio</p>
+        <a href="/contacto/" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition duration-300 transform hover:scale-105">
+            Contactar Ahora
+        </a>
+    </div>
+</section>
+
+<!-- {% endblock %} -->

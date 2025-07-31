@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',  # App core de la inmobiliaria
 ]
 
 MIDDLEWARE = [
@@ -54,10 +55,17 @@ ROOT_URLCONF = 'inmobiliaria.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+#       'DIRS': [],
+#        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+#                'django.template.context_processors.request',
+#                'django.contrib.auth.context_processors.auth',
+#                'django.contrib.messages.context_processors.messages',
+
+                 # 🔹 Esto permite que variables como el user, mensajes, etc. estén disponibles en el HTML
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',

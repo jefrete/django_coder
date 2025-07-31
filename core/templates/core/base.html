@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Figueroa Inmobiliaria{% endblock %}</title>
+  <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #1e40af;
+      --secondary: #facc15;
+      --accent: #059669;
+    }
+    .bg-primary { background-color: var(--primary); }
+    .text-primary { color: var(--primary); }
+    .bg-secondary { background-color: var(--secondary); }
+    .text-secondary { color: var(--secondary); }
+    .bg-accent { background-color: var(--accent); }
+    .text-accent { color: var(--accent); }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header/Nav -->
+  <header class="bg-gradient-to-r from-primary to-blue-800 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-3xl font-extrabold tracking-wide">Figueroa</a>
+      <nav class="space-x-4 text-white font-semibold">
+        <a href="/" class="hover:underline">Inicio</a>
+        <a href="/propiedades/" class="hover:underline">Propiedades</a>
+        <a href="/nosotros/" class="hover:underline">Nosotros</a>
+        <a href="/contacto/" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="mt-0">
+    {% block content %}
+    <!-- Acá se incrustan los contenidos de las otras páginas como inicio.html -->
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 mt-20">
+    <div class="text-center text-sm">
+      © {{ now|date:"Y" }} Figueroa Inmobiliaria. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
